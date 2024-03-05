@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="184dp"
+            android:layout_height="155dp"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.171"
+            app:srcCompat="@drawable/logo"
+            android:contentDescription="@string/logo" />
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/appname"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/app_name"
+            android:textColor="@color/primary"
+            android:textSize="30sp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_marginVertical="5dp"
+            android:layout_width="320dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_form"
+            android:hint="@string/email"
+            android:layout_gravity="center"
+            android:inputType="textEmailAddress"
+            android:paddingStart="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blank"
+            android:autofillHints="emailAddress"
+            tools:ignore="RtlSymmetry" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_marginVertical="5dp"
+            android:layout_gravity="center"
+            android:layout_width="320dp"
+            android:layout_height="54dp"
+            android:background="@drawable/bg_form"
+            android:hint="@string/pass"
+            android:inputType="textPassword"
+            android:paddingStart="30dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blank"
+            android:autofillHints="password"
+            tools:ignore="RtlSymmetry" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_marginVertical="20dp"
+            android:layout_gravity="center"
+            android:layout_width="115dp"
+            android:layout_height="52dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/log_in"
+            android:textAllCaps="false"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:id="@+id/alt"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/altLeft"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/qust_havent"
+                android:textAlignment="viewEnd"
+                android:textSize="15sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:paddingStart="5sp"
+                android:id="@+id/linkRegis"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/register"
+                android:textColor="@color/primary"
+                android:textSize="15sp"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

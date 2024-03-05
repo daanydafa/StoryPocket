@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "727129321350",
+    "firebase_url": "https://stopodb-default-rtdb.firebaseio.com",
+    "project_id": "stopodb",
+    "storage_bucket": "stopodb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727129321350:android:363a89955735424dbd0607",
+        "android_client_info": {
+          "package_name": "com.example.storypocket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCLslw1JNfik3G9ZayNaEPIi7DjKcxNPo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

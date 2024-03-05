@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".InsertProfileActivity">
+
+
+    <TextView
+        android:id="@+id/etComp"
+        android:layout_width="258dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/complete"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <TextView
+        android:id="@+id/etProf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/etProfile"
+        android:textColor="@color/primary"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etComp"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/formContainter"
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etProf"
+        app:layout_constraintVertical_bias="0">
+
+        <TextView
+            android:id="@+id/labelFullname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/full_name"
+            android:textColor="@color/semi_black"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_form"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="textPersonName"
+            android:paddingStart="30dp"
+            android:hint="@string/full_name"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blank"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="name"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/labelUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/username"
+            android:textColor="@color/semi_black"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_form"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="text"
+            android:paddingStart="30dp"
+            android:hint="@string/username"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blank"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="username"
+            android:layout_marginBottom="15dp"/>
+
+
+        <TextView
+            android:id="@+id/labelPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/phone_number"
+            android:textColor="@color/semi_black"
+            android:textSize="15sp"  />
+
+        <EditText
+            android:id="@+id/etPhoneNum"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/bg_form"
+            android:fontFamily="@font/poppins_regular"
+            android:inputType="phone"
+            android:paddingStart="30dp"
+            android:hint="@string/phone_number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/blank"
+            tools:ignore="RtlSymmetry"
+            android:autofillHints="phone"
+            android:layout_marginBottom="15dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="112dp"
+        android:layout_height="54dp"
+        android:text="@string/save"
+        android:fontFamily="@font/poppins_bold"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/formContainter"
+        app:layout_constraintVertical_bias="0.05" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:paddingTop="?attr/actionBarSize"
+    android:paddingBottom="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp">
+
+            <LinearLayout
+                android:id="@+id/photo_section"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <RelativeLayout
+                    android:layout_width="170dp"
+                    android:layout_height="170dp">
+
+                    <ImageView
+                        android:id="@+id/photo"
+                        android:src="@drawable/baseline_person_24"
+                        android:background="@drawable/blank_profile"
+                        android:layout_width="170dp"
+                        android:layout_height="170dp"
+                        android:layout_gravity="center"/>
+                    <ImageView
+                        android:id="@+id/addPhoto"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/camera"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/formContainter"
+                android:layout_width="345dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/photo_section"
+                app:layout_constraintVertical_bias="0">
+
+                <TextView
+                    android:id="@+id/labelFullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/full_name"
+                    android:textColor="@color/semi_black"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_form"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="textPersonName"
+                    android:paddingStart="30dp"
+                    android:hint="@string/full_name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blank"
+                    tools:ignore="RtlSymmetry"
+                    android:autofillHints="name"
+                    android:layout_marginBottom="15dp"/>
+
+                <TextView
+                    android:id="@+id/labelUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/username"
+                    android:textColor="@color/semi_black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_form"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:paddingStart="30dp"
+                    android:hint="@string/username"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blank"
+                    tools:ignore="RtlSymmetry"
+                    android:autofillHints="username"
+                    android:layout_marginBottom="15dp"/>
+
+
+                <TextView
+                    android:id="@+id/labelPhoneNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/phone_number"
+                    android:textColor="@color/semi_black"
+                    android:textSize="15sp"  />
+
+                <EditText
+                    android:id="@+id/etPhoneNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/bg_form"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="phone"
+                    android:paddingStart="30dp"
+                    android:hint="@string/phone_number"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/blank"
+                    tools:ignore="RtlSymmetry"
+                    android:autofillHints="phone"/>
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="200dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="25dp"
+                    android:background="@drawable/bg_update"
+                    android:backgroundTint="@color/primary"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/update_profile"
+                    android:textSize="16sp"
+                    tools:ignore="TextSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/btnLogout"
+                    android:src="@drawable/ic_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center">
+                </ImageView>
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
